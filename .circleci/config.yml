@@ -26,7 +26,7 @@ jobs:
       - run:
           name: Master Herokuun
           command: |
-            git push https://heroku:$f5d809e0-8e90-4ef5-9fda-3b5a916160ce@git.heroku.com/$morotusmorottaja.git master
+            git push https://heroku:f5d809e0-8e90-4ef5-9fda-3b5a916160ce@git.heroku.com/morotusmorottaja.git master
 
 workflows:
   version: 2
