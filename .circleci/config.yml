@@ -1,0 +1,19 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      # the Docker image with Cypress dependencies
+      - image: cypress/base:10
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    working_directory: ~/app
+    parallelism: 1
+    steps:
+      - checkout
+      - run:
+          name: Morottajan nimi-kentän testaus
+          command: npx cypress run
+      - store_artifacts:
+          path: cypress/videos
